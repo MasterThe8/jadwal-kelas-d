@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    transition-duration: 0.5s;
+    background-image: linear-gradient(to bottom right, #160524, #0a0011);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    min-height: 96vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(172, 13, 172);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    /* text-shadow: 2px 3px #000; */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.603),
+            0px 0px 25px rgb(127, 11, 204),
+            0px 0px 25px rgb(100, 4, 163);
+}
+
+h2 {
+    font-size: 36px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 28px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+h5 {
+    margin-top: 5px;
+    font-size: 20px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+    margin: 0 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    display: flex;
+    width: auto;
+    padding: 20px 10px;
+}
+
+.card {
+    background-color: #320855;
+    border-radius: 16px;
+    width: 350px;
+    height: auto;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    margin-left: 5%;
+}
+
+.card .box-hari {
+    text-align: center;
+    padding: 5px;
+}
+
+.card .box-matkul {
+    padding: 10px;
+    text-align: center;
+    background-color: #1c0430;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    margin: 5px 0;
+}
+
+.text-red {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+            0px 0px 20px rgb(165, 12, 12),
+            0px 0px 30px rgb(199, 10, 10);
+}
+
+.text-green {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(6, 129, 12),
+        0px 0px 30px rgb(33, 207, 10);
+}
+
+.text-blue {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(20, 10, 153),
+        0px 0px 30px rgb(40, 8, 224);
+}
+
+.text-yellow {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(190, 188, 16),
+        0px 0px 30px rgb(255, 255, 0);
+}
+
+.text-bluelight {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(15, 192, 154),
+        0px 0px 30px rgb(0, 225, 255);
+}
+
+.text-pink {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 1),
+        0px 0px 20px rgb(165, 12, 127),
+        0px 0px 30px rgb(255, 0, 255);
+}
+
+footer .container {
+    width: auto;
+    height: 50px;
+    padding: 10px;
+    padding-top: 18px;
+    text-align: center;
+    background-color: #111;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    [class*="content"] {
+        width: 100%;
+        display: block;
+        padding-left: 10%;
+    }
+
+    .card {
+        margin: 20px 10px;
+    }
+}
