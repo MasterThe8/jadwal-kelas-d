@@ -157,6 +157,6 @@ footer .container {
     }
 
     .card {
-        margin: 20px 10px;
+        margin: 20px auto;
     }
 }
