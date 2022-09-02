@@ -154,7 +154,6 @@ footer .container {
     [class*="content"] {
         width: 100%;
         display: block;
-        padding-left: 10%;
     }
 
     .card {
