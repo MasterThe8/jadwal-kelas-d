@@ -10,6 +10,10 @@
 <body>
     <h1>Jadwal Kelas D</h1>
 
+    <div class="list">
+        <input type="checkbox" onclick="shEtprof()" id="cShEtprof"><label>Etprof</label><br>
+        <input type="checkbox" onclick="shPraktikum()" id="cShPraktikum"><label>Praktikum</label>
+    </div>
     <div class="row">
         <div class="content">
             <div class="card">
@@ -27,7 +31,7 @@
             </div>
             <div class="card">
                 <div class="box-hari">
-                    <h2 class="text-yellow">Selasa</h2>
+                    <h2 class="text-green">Selasa</h2>
                 </div>
                 <div class="box-matkul">
                     <h3>SI</h3>
@@ -35,16 +39,16 @@
                 </div>
                 <div class="box-matkul">
                     <h3>IMK</h3>
-                    <h5>D3.04 | 12:50 - 14:30</h5>
+                    <h5>D3.04 | 13:00 - 14:40</h5>
                 </div>
             </div>
             <div class="card">
                 <div class="box-hari">
-                    <h2 class="text-green">Rabu</h2>
+                    <h2 class="text-blue">Rabu</h2>
                 </div>
-                <div class="box-matkul" style="background-color: #30022c;">
+                <div id="praktikumS" class="box-matkul" style="background-color: #30022c;">
                     <h3>Praktikum SBD</h3>
-                    <h5>12:50 - 14:30</h5>
+                    <h5>13:00 - 14:40</h5>
                 </div>
             </div>
         </div>
@@ -53,7 +57,7 @@
         <div class="content" style="padding-top: 0px;">
             <div class="card">
                 <div class="box-hari">
-                    <h2 class="text-bluelight">Kamis</h2>
+                    <h2 class="text-yellow">Kamis</h2>
                 </div>
                 <div class="box-matkul">
                     <h3>Metnum</h3>
@@ -63,20 +67,32 @@
                     <h3>SO</h3>
                     <h5>A3.02 | 09:30 - 12:00</h5>
                 </div>
+                <div id="etprof2" class="box-matkul" style="background-color: #070430;">
+                    <h3>Etprof B</h3>
+                    <h5>D3.04 | 13:00 - 14:40</h5>
+                </div>
+                <div id="etprof1" class="box-matkul" style="background-color: #070430;">
+                    <h3>Etprof A</h3>
+                    <h5>D3.04 | 14:40 - 16:50</h5>
+                </div>
             </div>
             <div class="card">
                 <div class="box-hari">
-                    <h2 class="text-blue">Jumat</h2>
+                    <h2 class="text-bluelight">Jumat</h2>
                 </div>
-                <div class="box-matkul" style="background-color: #30022c;">
+                <div id="praktikumJ" class="box-matkul" style="background-color: #30022c;">
                     <h3>Praktikum Jarkom</h3>
                     <h5>07:00 - 08:40</h5>
                 </div>
+                <div id="etprof3" class="box-matkul" style="background-color: #070430;">
+                    <h3>Etprof C</h3>
+                    <h5>A3.02 | 08:40 - 10:20</h5>
+                </div>
                 <div class="box-matkul">
                     <h3>SBD</h3>
-                    <h5>D3.03 | 13:20 - 16:00</h5>
+                    <h5>D3.03 | 13:30 - 16:00</h5>
                 </div>
-                <div class="box-matkul" style="background-color: #30022c;">
+                <div id="praktikumA" class="box-matkul" style="background-color: #30022c;">
                     <h3>Praktikum AlgoDat</h3>
                     <h5>16:00 - 18:30</h5>
                 </div>
@@ -98,5 +114,47 @@
             <p>Copyright &copy; 2022 MasterThe8</p>
         </div>
     </footer>
+
+    <script>
+        let etprof1 = document.getElementById('etprof1');
+        let etprof2 = document.getElementById('etprof2');
+        let etprof3 = document.getElementById('etprof3');
+        let praktikumA = document.getElementById('praktikumA');
+        let praktikumJ = document.getElementById('praktikumJ');
+        let praktikumS = document.getElementById('praktikumS');
+
+        etprof1.style.display = "none";
+        etprof2.style.display = "none";
+        etprof3.style.display = "none";
+        praktikumA.style.display = "none";
+        praktikumJ.style.display = "none";
+        praktikumS.style.display = "none";
+
+        function shEtprof(){
+            if (cShEtprof.checked == true){
+                etprof1.style.display = "block";
+                etprof2.style.display = "block";
+                etprof3.style.display = "block";   
+            }
+            else {
+                etprof1.style.display = "none";
+                etprof2.style.display = "none";
+                etprof3.style.display = "none";
+            }
+        }
+
+        function shPraktikum(){
+            if (cShPraktikum.checked == true){
+                praktikumA.style.display = "block";
+                praktikumJ.style.display = "block";
+                praktikumS.style.display = "block";
+            }
+            else{
+                praktikumA.style.display = "none";
+                praktikumJ.style.display = "none";
+                praktikumS.style.display = "none";   
+            }
+        }
+    </script>
 </body>
 </html>
