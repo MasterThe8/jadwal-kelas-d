@@ -140,6 +140,14 @@ h5 {
         0px 0px 30px rgb(255, 0, 255);
 }
 
+.list {
+    margin: 0 auto;
+    display: block;
+    width: 120px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
 footer .container {
     width: auto;
     height: 50px;
@@ -157,10 +165,10 @@ footer .container {
     }
 
     .card {
-        margin: 20px auto;
+        margin: 20px 10px;
         width: auto;
     }
-    
+
     h1 {
         font-size: 36px;
     }
